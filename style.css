@@ -11,17 +11,24 @@
   --clr-little-dark: #3b0010;
   --clr-canvas-default: #0a0e1a;
   --border-clr-horizontal: #1a233d;
-  --default-heading-font: 'General Sans';
+  --default-heading-font: "General Sans";
   --bold-font-weight: 800;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+::selection {
+  background-color: var(--clr-rose);
+  color: var(--clr-light);
 }
 
-html, body {
+* {
+  box-sizing: border-box;
+  font-family: Poppins;
+  color: white;
+}
+
+html,
+body {
   height: 100%;
 }
 
@@ -54,16 +61,22 @@ body {
   top: -50px;
   transform: translateX(-50%);
   background-color: var(--clr-rose);
-  border-radius: 20px;
+  
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   transition: all 0.4s ease;
 }
 
-
 .card:hover .img {
   width: 250px;
   height: 250px;
+  border-radius: 50px;
+}
+
+.img {
+  border-radius: 100px;
+  cursor: pointer;
+  z-index: 100;
 }
 
 .img .mai-san-image {
@@ -73,6 +86,95 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 50px;
   
+}
+
+.heading,
+.followers,
+.following {
+  font-family: Poppins;
+  opacity: 0;
+}
+
+
+.card .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 99;
+  
+}
+
+.card .content .details {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.card .content .details h2 {
+  color: var(--clr-rose);
+  line-height: 1.2rem;
+}
+
+.skills {
+  font-size: 12px;
+}
+.data .followers .following {
+  display: flex;
+  flex-direction: row;
+}
+
+.follow-btn,
+.message-btn {
+  flex-direction: row;
+  padding: 10px;
+  width: 130px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.follow-btn {
+  color: white;
+  background: var(--clr-rose);
+  border: none;
+  margin-right: 5px;
+}
+
+.follow-btn:hover {
+  color: white;
+  background: rgb(184, 25, 59);
+  border: none;
+}
+
+.message-btn {
+  border: 1px solid var(--clr-light);
+  color: white;
+  background-color: var(--clr-dark);
+}
+
+.message-btn:hover {
+  border: 1px solid var(--clr-light);
+  color: white;
+  background-color: rgb(20, 27, 41);
+}
+
+
+.card:hover .content * {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.specific-data {
+  color: #8a8181;
 }
