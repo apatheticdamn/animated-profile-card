@@ -42,6 +42,7 @@ body {
 
 .card {
   position: relative;
+  background-color: var(--clr-canvas-default);
   box-shadow: 0px 5px 15px var(--clr-shadow);
   width: 350px;
   height: 190px;
