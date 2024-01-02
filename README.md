@@ -17,7 +17,7 @@ This project allows you to create a stylish and animated profile card for your w
 
 ## Usage
 
-1. Clone the repository:
+Clone the repository:
 
 ```bash
 https://github.com/ApatheticDamn/animated-profile-card.git
